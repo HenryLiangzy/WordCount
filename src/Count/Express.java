@@ -5,10 +5,14 @@ import java.util.Scanner;
 public class Express {
     public String editExpress(String original_String){
         String output_String;
+        String normal = "(s)(ing)(ness)(ed)(ly)";
+
+        char head = original_String.charAt(0);
 
 
+        output_String = original_String.substring(1) + normal;
 
-        return original_String;
+        return output_String;
     }
 
     //test the express function
