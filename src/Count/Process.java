@@ -13,7 +13,7 @@ public class Process {
 
         //read the file from the disk
         try{
-            input_file = new FileInputStream("test.txt");
+            input_file = new FileInputStream(in);
             System.out.println("Import file successful");
 
         }catch (IOException e){
