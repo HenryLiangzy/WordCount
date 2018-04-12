@@ -1,3 +1,6 @@
 Hello World
 This is the test
 a test for cloud computing course
+cat cat cat
+cat cat
+act cats

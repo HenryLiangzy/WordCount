@@ -3,6 +3,7 @@ package Count;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.*;
+import java.util.Scanner;
 
 public class Process {
     public static void main(String[] args){
@@ -22,16 +23,10 @@ public class Process {
         long length = in.length();
         System.out.println("The length of file is:" + length);
 
-        /*
-        try{
-            int data;
-            while ((data = input_file.read()) != -1){
-                
-            }
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-        */
+        int times = 0;
+        times = Match.main(input_file);
+
+        System.out.println("There is " + times + " times in this file\n");
 
 
         //end the operation of the file and close it safely

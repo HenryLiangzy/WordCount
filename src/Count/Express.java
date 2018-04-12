@@ -7,7 +7,7 @@ public class Express {
     //edit the regular express
     public String editExpress(String original_String){
         String output_String;
-        String normal = "(s|ing|ness|ed|ly)";
+        String normal = "(s|ing|ness|ed|ly)*\\b";
 
         char head = original_String.charAt(0);
 
@@ -21,7 +21,7 @@ public class Express {
         }
 
 
-        output_String ="(" + Character.toString(head) + "|" + Character.toString(output_char) + ")" +  original_String.substring(1) + normal;
+        output_String ="\\b(" + Character.toString(head) + "|" + Character.toString(output_char) + ")" +  original_String.substring(1) + normal;
 
         return output_String;
     }
