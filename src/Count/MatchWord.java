@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Date;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,6 +22,7 @@ public class MatchWord {
         System.out.print("Input the match word:");
         Scanner keyboard_input = new Scanner(System.in);
         String input_phrase = keyboard_input.nextLine();
+
 
         Express expression = new Express();
         Pattern pattern = Pattern.compile(expression.editExpress(input_phrase));
@@ -52,6 +52,13 @@ public class MatchWord {
         long total = costTime_end - costTime_start;
         System.out.println("\nThere is " + times + " times in this file");
         System.out.println("Word count totally cost "+ total + " ms");
+        keyboard_input.close();
+
+        try{
+            bf_file.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
 
     }
 }
