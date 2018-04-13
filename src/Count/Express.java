@@ -26,7 +26,7 @@ public class Express {
         return output_String;
     }
 
-    //test the express function
+    //test the express function is work correctly
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         String express = input.nextLine();

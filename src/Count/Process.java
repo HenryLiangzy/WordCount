@@ -7,6 +7,7 @@ import java.io.*;
 public class Process {
     public static void main(String[] args){
 
+        //Create the file object
         File in = new File("test.txt");
         FileInputStream input_file = null;
 
@@ -19,13 +20,12 @@ public class Process {
             e.printStackTrace();
         }
 
+        //Calculate the file size
         long length = in.length();
         System.out.println("The length of file is:" + length);
 
-        int times = 0;
-        times = MatchWord.main(input_file);
-
-        System.out.println("There is " + times + " times in this file\n");
+        //Start to count the word
+        MatchWord.main(input_file);
 
 
         //end the operation of the file and close it safely
