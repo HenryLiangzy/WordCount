@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-public class Match {
+public class MatchWord {
 
 
 
@@ -19,7 +19,7 @@ public class Match {
 
         Express expression = new Express();
         Pattern pattern = Pattern.compile(expression.editExpress(input_phrase));
-        //Match match = pattern.matcher()
+
 
 
 

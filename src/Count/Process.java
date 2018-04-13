@@ -3,7 +3,6 @@ package Count;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.*;
-import java.util.Scanner;
 
 public class Process {
     public static void main(String[] args){
@@ -24,7 +23,7 @@ public class Process {
         System.out.println("The length of file is:" + length);
 
         int times = 0;
-        times = Match.main(input_file);
+        times = MatchWord.main(input_file);
 
         System.out.println("There is " + times + " times in this file\n");
 
