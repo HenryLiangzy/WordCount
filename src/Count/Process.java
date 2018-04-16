@@ -3,6 +3,7 @@ package Count;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.*;
+import java.util.Scanner;
 
 public class Process {
     public static void main(String[] args){
@@ -24,8 +25,13 @@ public class Process {
         long length = in.length();
         System.out.println("The length of file is:" + length);
 
+        //Construct the regular expression
+        System.out.print("Input the match word:");
+        Scanner keyboard_input = new Scanner(System.in);
+        String input_phrase = keyboard_input.nextLine();
+
         //Start to count the word
-        MatchWord.main(input_file);
+        MatchWord.main(input_file, input_phrase);
 
 
         //end the operation of the file and close it safely
