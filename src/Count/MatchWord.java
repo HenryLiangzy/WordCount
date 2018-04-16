@@ -14,13 +14,18 @@ public class MatchWord {
 
 
     //test for the regular expression
-    public static void main(FileInputStream input_file, String match_Word){
+    public static void main(FileInputStream input_file){
 
         //Create the BufferedReader object
         BufferedReader bf_file = new BufferedReader(new InputStreamReader(input_file));
 
+        //Construct the regular expression
+        System.out.print("Input the match word:");
+        Scanner keyboard_input = new Scanner(System.in);
+        String input_phrase = keyboard_input.nextLine();
+
         Express expression = new Express();
-        Pattern pattern = Pattern.compile(expression.editExpress(match_Word));
+        Pattern pattern = Pattern.compile(expression.editExpress(input_phrase));
         Matcher matcher = null;
 
 
