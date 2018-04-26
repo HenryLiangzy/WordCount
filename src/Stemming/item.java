@@ -22,7 +22,7 @@ public class item {
     }
 
     public void addTimes(){
-        this.times++;
+        this.times = this.times + 1;
     }
 
     public void delTimes(){

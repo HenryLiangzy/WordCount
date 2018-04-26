@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class Spilt {
 
-    public static String replaceSymbols(String input_sentence){
+    public static List replaceSymbols(String input_sentence){
         String output_sentence = null;
 
         Pattern p = Pattern.compile("(,|\\.|!|@|\\\"|\\'|%|\\?|\\(|\\)|\\$|\\d|&|;)");
@@ -16,15 +16,10 @@ public class Spilt {
 
         output_sentence = m.replaceAll(" ");
 
-        return output_sentence;
-    }
-
-    public static List devideWord(String input_string){
-
         List<String> wordList = new ArrayList<String>();
 
         Pattern pattern = Pattern.compile("\\b([a-zA-Z]+)\\b");
-        Matcher matcher = pattern.matcher(input_string);
+        Matcher matcher = pattern.matcher(output_sentence);
 
         while (matcher.find()){
             wordList.add(matcher.group(1));
@@ -33,20 +28,27 @@ public class Spilt {
         return wordList;
     }
 
-    public static void main(String[] args){
+
+    public static List main(){
 
         List<String> Word;
 
-        String test = "test, this is a 56$ test. Who? 56% and @mail.com (help) you&me";
+        String test = "test, this is a 56$ test. Who? 56% and @mail.com (help) you&me\n" +
+                "Hello World\n" +
+                "This is the test\n" +
+                "a test for cloud computing course\n" +
+                "cat cat cat\n" +
+                "cat cat\n" +
+                "act cats";
 
-        String output = Spilt.replaceSymbols(test);
 
-        Word = Spilt.devideWord(output);
+        Word = Spilt.replaceSymbols(test);
 
         for (int i = 0; i < Word.size(); i++){
             System.out.println(Word.get(i));
         }
 
         //System.out.println(output);
+        return Word;
     }
 }
