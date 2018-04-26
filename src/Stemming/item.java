@@ -21,7 +21,13 @@ public class item {
         this.word = word;
     }
 
-    public void setTimes(int times){
-        this.times = times;
+    public void addTimes(){
+        this.times++;
     }
+
+    public void delTimes(){
+        this.times--;
+    }
+
+
 }
