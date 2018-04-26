@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Stemmer {
-    public String stemmingWord(String input_word){
+    public static String stemmingWord(String input_word){
         String output_word = null;
 
         Pattern pattern = Pattern.compile("\\b(s|ing|ness|ed|ly)*\\b");
@@ -12,4 +12,6 @@ public class Stemmer {
 
         return output_word;
     }
+
+
 }
